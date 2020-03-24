@@ -1,0 +1,42 @@
+﻿
+
+
+@model IEnumerable<APIMVCTask.Models.Regulation>
+
+@{
+    ViewBag.Title = "index";
+}
+
+<h2>index</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.typeOfRule)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrganizationId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.myKeyword)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.typeOfRule)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrganizationId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.myKeyword)
+        </td>
+
+    </tr>
+}
+
+</table>
