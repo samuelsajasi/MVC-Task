@@ -8,9 +8,13 @@ namespace APIMVCTask.Models
     public class Regulation
     {
 
-        public string typeOfRule { get; set; }
-        public int OrganizationId { get; set; }
-        public string myKeyword { get; set; }
+        public string org_name { get; set; }
+        public int org_id { get; set; }
+        public string org_website { get; set; }
+        public string document_link { get; set; }
+        
+
+
 
     }
 }

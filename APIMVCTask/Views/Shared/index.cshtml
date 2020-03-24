@@ -4,7 +4,7 @@
 @model IEnumerable<APIMVCTask.Models.Regulation>
 
 @{
-    ViewBag.Title = "index";
+    ViewBag.Title = "APIMVCTask";
 }
 
 <h2>index</h2>
@@ -13,13 +13,18 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.typeOfRule)
+            @Html.DisplayNameFor(model => model.org_id)
+
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.OrganizationId)
+            @Html.DisplayNameFor(model => model.org_name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.myKeyword)
+            @Html.DisplayNameFor(model => model.org_website)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.document_link)
         </th>
         <th></th>
     </tr>
@@ -27,13 +32,19 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.typeOfRule)
+
+            @Html.DisplayFor(modelItem => item.org_id)
+
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.OrganizationId)
+            @Html.DisplayFor(modelItem => item.org_name)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.myKeyword)
+            @Html.DisplayFor(modelItem => item.org_website)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.document_link)
         </td>
 
     </tr>
